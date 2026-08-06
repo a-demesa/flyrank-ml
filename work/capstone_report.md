@@ -1,10 +1,10 @@
-# Capstone Report — <your lane>
+# Capstone Report — Content Refresh Recommendation Using Decision Tree Classification
 
 - **Author:** Angeline de Mesa
 - **Lane:** Content Refresh Recommendation
 - **Repo:** https://github.com/a-demesa/flyrank-ml
 - **Date:** August 2026
-
+---
 ## 1. Problem framing
 
 This project supports the decision of which webpages should be reviewed for possible content refresh.
@@ -19,6 +19,7 @@ The cost of a wrong recommendation is spending time updating pages that may not 
 
 Machine learning helps identify patterns across many observations that would be difficult to recognize manually.
 
+---
 ## 2. Data safety
 
 The project uses the FlyRank Internship Warehouse dataset.
@@ -41,6 +42,7 @@ Client identifiers were only used for grouped validation and never as model feat
 
 No client names, URLs, or private search queries appear anywhere in this project.
 
+---
 ## 3. Baseline
 
 The baseline model used a transparent scoring rule based primarily on Google Search Console impressions.
@@ -51,7 +53,8 @@ The baseline produced a ranked recommendation list that served as the comparison
 
 Both approaches were evaluated on the same dataset and validation design.
 
-## 4. Model
+---
+## 4. Model / analysis
 
 The final model is a Decision Tree classifier.
 
@@ -67,6 +70,7 @@ The target variable indicates whether a webpage received at least one Google Sea
 
 Several fields were intentionally excluded to reduce the possibility of data leakage.
 
+---
 ## 5. Evaluation
 
 Grouped validation by client_hash_id was used to reduce leakage between training and testing data.
@@ -77,6 +81,7 @@ The grouped validation produced an observed accuracy of 1.00 on the sampled data
 
 Error analysis suggests that future evaluation on larger datasets would provide a more reliable estimate of generalization performance.
 
+---
 ## 6. Interpretation
 
 The Decision Tree relied primarily on impressions, clicks, and average search position.
@@ -87,6 +92,7 @@ The model provides decision-support rather than proof that refreshing content wi
 
 No causal relationship is claimed.
 
+---
 ## 7. Recommendation
 
 The ranked recommendations should be used as a starting point for editorial review.
@@ -102,6 +108,7 @@ The recommendations should not be applied automatically.
 
 Confidence in the recommendations is moderate because they were evaluated only on the internship dataset.
 
+---
 ## 8. Reproducibility
 
 Clone the repository.
