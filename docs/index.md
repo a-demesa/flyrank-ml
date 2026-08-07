@@ -4,7 +4,17 @@
 - **Lane:** Content Refresh Recommendation
 - **Repo:** https://github.com/a-demesa/flyrank-ml
 - **Date:** August 2026
-  
+
+---
+# Abstract
+
+This project investigates whether machine learning can support FlyRank's content refresh workflow by helping identify webpages that may benefit from editorial review. A Decision Tree classifier was developed using observable Google Search Console metrics from the FlyRank Internship Warehouse dataset. The model was compared with a transparent baseline using grouped validation by client to reduce data leakage. The observed results suggest that search performance metrics can help prioritize webpages for manual review. These findings are intended to support editorial decision-making and should not be interpreted as automated publishing decisions.
+
+---
+# Introduction
+
+FlyRank manages large collections of website content, making it difficult for editors to manually determine which pages should be refreshed first. This project explores whether observable search performance metrics can help prioritize webpages for editorial review. By using an interpretable Decision Tree model and honest validation practices, this work aims to provide decision-support that helps content teams focus their efforts while acknowledging the limitations of the available data.
+
 ---
 ## 1. Problem framing
 
