@@ -35,6 +35,8 @@ Machine learning helps identify patterns across many observations that would be 
 
 The project uses the FlyRank Internship Warehouse dataset.
 
+The analysis uses the `fact_content_daily_performance` table and the 10,000-row sample used in the capstone notebook, covering report dates from January 27, 2025 through February 14, 2025.
+
 The primary features include:
 
 - gsc_impressions
