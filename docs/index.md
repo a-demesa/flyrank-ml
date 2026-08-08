@@ -109,7 +109,7 @@ The Decision Tree achieved an observed Precision@50 of 0.50, compared with 0.02 
 
 These results are observed evaluation results and should not be interpreted as evidence that refreshing a webpage will improve its future search performance.
 
-![Baseline vs Decision Tree Precision@50](../work/baseline_vs_model_precision_at_50.png)
+![Baseline vs Decision Tree Precision@50](baseline_vs_model_precision_at_50.png)
 
 ---
 ## 6. Interpretation
