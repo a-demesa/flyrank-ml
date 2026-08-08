@@ -103,7 +103,7 @@ The Decision Tree was compared with the Week-4 baseline using the same sampled d
 | Week-4 Baseline | 1.00 |
 | Decision Tree | 1.00 |
 
-![Baseline vs Decision Tree Accuracy](../work/baseline_vs_model_accuracy.png)
+![Baseline vs Decision Tree Accuracy](https://a-demesa.github.io/flyrank-ml/work/baseline_vs_model_accuracy.png)
 
 Both approaches achieved an observed accuracy of 1.00 on the sampled validation data. This result should be interpreted cautiously because the target variable is whether a page received at least one click, and the evaluation used a sampled dataset. The result does not demonstrate that the model will generalize to new data or that refreshing a page will improve its future search performance.
 
