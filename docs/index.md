@@ -84,28 +84,32 @@ Several fields were intentionally excluded to reduce the possibility of data lea
 ---
 ## 5. Evaluation
 
-Grouped validation by client_hash_id was used to reduce leakage between training and testing data.
+Grouped validation by `client_hash_id` was used to reduce leakage between training and testing data.
 
-Model performance was compared directly against the baseline using the same split.
+The Decision Tree was evaluated using the same sampled dataset and validation design as the comparison baseline.
 
-The grouped validation produced an observed accuracy of 1.00 on the sampled dataset.
+Under grouped-by-client validation, the model produced an observed accuracy of 0.9504 (95.04%) on the sampled dataset.
 
-Error analysis suggests that future evaluation on larger datasets would provide a more reliable estimate of generalization performance.
+This result is an observed evaluation result and should not be interpreted as proof that the model will generalize to all clients or future data.
 
 ---
 
-# Results
+## Results
 
-The Decision Tree was compared with the Week-4 baseline using the same sampled dataset, validation split, and accuracy metric.
+The Decision Tree was compared with the Week-4 baseline using the same sampled test set and Precision@50 metric. Precision@50 was used because the capstone goal is to prioritize webpages for manual review.
 
-| Method | Accuracy |
+| Method | Precision@50 |
 |---|---:|
-| Week-4 Baseline | 1.00 |
-| Decision Tree | 1.00 |
+| Week-4 Baseline | 0.02 |
+| Decision Tree | 0.50 |
 
-![Baseline vs Decision Tree Accuracy](baseline_vs_model_accuracy.png)
+The target base rate in the sampled test set was 0.0845 (8.45%).
 
-Both approaches achieved an observed accuracy of 1.00 on the sampled validation data. This result should be interpreted cautiously because the target variable is whether a page received at least one click, and the evaluation used a sampled dataset. The result does not demonstrate that the model will generalize to new data or that refreshing a page will improve its future search performance.
+The Decision Tree achieved an observed Precision@50 of 0.50, compared with 0.02 for the Week-4 baseline. On this sampled test set, the Decision Tree therefore showed stronger directional prioritization of positive-target pages than the transparent baseline.
+
+These results are observed evaluation results and should not be interpreted as evidence that refreshing a webpage will improve its future search performance.
+
+![Baseline vs Decision Tree Precision@50](../work/baseline_vs_model_precision_at_50.png)
 
 ---
 ## 6. Interpretation
